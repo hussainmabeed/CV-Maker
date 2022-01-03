@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CV Form </title>
+    
+    
+<style>
+  input , textarea {
+    font-family: 'Antic', sans-serif;
+    font-size: 25px;
+    border: 2px solid black;  border-radius: 12px;
+    text-align: center;
+  }
+  @font-face {
+    font-family: 'Antic';
+    src: url(sources/Antic-Regular.ttf);
+  }
+</style>
+</head>
+<body class="bg-light" style="padding-left: 200px;padding-right: 200px; background-image: url(background.jpeg); font-family: 'Antic', sans-serif; font-size: 30px;">
+  <div style="background-color: bisque; padding-left: 35px; border-radius: 100px; box-shadow: 0 0 3px 3px black;" >
+    <h1 style="text-align: center; text-shadow: 3px 3px 3px  black;" id="top" class="text-center display-3 text-muted">CV Information</h1>
+    <form id="temp"  class="needs-validation "  target="_blanck"  >
+    <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="name">Name :</label>
+          <input required class="form-control text-capitalize  "  style="position: absolute; left: 35%; width: 35%;" type="text" name="name" id="name"  />
+          <div class="valid-feedback" id="namefeed">
+        </div>
+        </div>
+        <br>
+        <div class="col-md-6 mb-3">
+            <label for="title"> Job Title :</label>
+            <input   type="text" name="title" id="title"  style="position: absolute; left: 35%; width: 35%;" required class="form-control  text-capitalize  "/>
+          </div>
+          <br>
+          <div class="valid-feedback" id="namefeed">
+          </div>
+        </div>
+        <div  class="form-row">
+            
+          </div>
+          <div  class="form-row">
+            <div class="col-md-6 mb-3" >
+              <label for="email">E-mail :</label>
+              <input style="position: absolute; left: 35%; width: 35%;" required type="email" name="email" id="email" class="form-control" />
+            </div>
+            <br>
+            <div class="valid-feedback" id="emailfeed">
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="mobile">Mobile :</label>
+              <input  style="position: absolute; left: 35%; width: 35%;" required type="tel" name="mobile" id="mobile" class="form-control" />
+            </div>
+            <br>
+          </div>
+            <div class="valid-feedback" id="mobilefeed">
+            </div>
+            <div class="form-row">
+                <div class="col-md-12 mb-6">
+               <label for="technical">Technical Skills :</label>
+               <input class="form-control text-center"style="position: absolute; left: 35%; width: 35%;" type="text" name="technical" id="technical"  placeholder="Press space between skills"/>
+             </div>
+             <br>
+             <div class="col-md-12 mb-6">
+              <label" for="about">ِAbout yourself :</label>
+              <textarea  requiredid="about" name="about" rows="2" cols="32"  style="position: absolute; left: 35%; width: 35%;" placeholder="Basic info" class=" text-capitalize form-control text-center"></textarea>
+            </div>
+            <br>
+           </div>
+             <br><br>
+             <div>
+                <input class="btn btn-primary" onmousedown="this.style.border = '2px solid  rgb(180, 104, 18)'"  onmouseup="this.style.border = '2px solid black'"   style=" font-size: 30px; box-shadow: 0 0 1px 1px black; height: 60px; background-color: rgb(238, 184, 118); border: 2px solid black;  border-radius: 12px; width: 200px;" type="button" id="addExperience" onclick="addEx()" value=" Experience"  />
+                <div >
+                  <div id="experience"  >
+                    
+                  </div>
+                </div>
+              </div>
+              <br><br><br>
+              <div>
+            <input class="btn btn-primary"  onmousedown="this.style.border = '2px solid  rgb(180, 104, 18)'"  onmouseup="this.style.border = '2px solid black'"   style=" font-size: 30px; box-shadow: 0 0 1px 1px black; height: 60px; background-color: rgb(238, 184, 118); border: 2px solid black;  border-radius: 12px; width: 200px;" type="button" id="addEducation" onclick="addEd()" value="Add Education" />
+            <br><br>
+            <div id="education"></div>
+              </div>
+              <br><br><br>
+              <div class="form-row" >
+                <div class="col-md-3 mb-3">
+                  <label for="temp1"><img src="slide1.jpg" alt="" style="width: 175px;height: 230px;"></label>
+                  <input type="radio" id="temp1" onchange="test();" name="boody">
+                  <label for="temp2"><img src="slide2.jpg" alt="" style="width: 175px;height: 230px;"></label>
+                  <input type="radio" id="temp2" onchange="test();" name="boody">
+                  <label for="temp3"><img src="slide3.jpg" alt="" style="width: 175px;height: 230px;"></label>
+                  <input type="radio" id="temp3" onchange="test();" name="boody">
+                </div>
+            </div>
+
+                <br>
+    <div  style="display:flex; justify-content: center; align-items: center;" >
+      <input  onmousedown="this.style.border = '2px solid white'"  onmouseup="this.style.border = '2px solid black'"   style=" font-size: 30px; box-shadow: 0 0 1px 1px black; height: 60px; background-color:black; color: white; border: 2px solid black;  border-radius: 12px; width: 200px; " type="submit" value="Get my CV"  />
+    </div>
+    </form>
+    <br>
+    <a href="#top" style="float: right;" > <img src="./sources/top.jpg" alt="" width="50px" height="50px" ></a>
+  </div>
+  <div style="text-align: center; background-color: bisque; margin: 30px 100px 30px 100px; border-radius: 50px;  box-shadow: 0 0 3px 3px black; font-size: 20px;"> All Rights Reserved &#169;</div>
+             <script>
+               var counter1 = 0;
+               var counter2 = 0
+                //  to get experince from button to form 
+                function addEx() {
+                  counter1++
+                  if (counter1 <= 3 ) {
+                  var experience = document.getElementById("experience");
+            
+                  experience.appendChild(document.createElement("br"));
+                  experience.appendChild(document.createTextNode("Company Name :"));
+                  var cName = document.createElement("input");
+                  cName.type = "text";
+                  cName.name = "companyName";
+                  cName.style.position ="absolute"
+                  cName.style.left ="35%"
+                  cName.style.width ="35%"
+                  cName.classList.add("form-control");
+
+                  experience.appendChild(cName);
+                  experience.appendChild(document.createElement("br"));
+                  experience.appendChild(document.createElement("br"));
+                  experience.appendChild(document.createTextNode("Duration y-y :"));
+                  var cName = document.createElement("input");
+                  cName.type = "text";
+                  cName.name = "exduration";
+                  cName.style.position ="absolute"
+                  cName.style.left ="35%"
+                  cName.style.width ="35%"
+                  cName.classList.add("form-control","text-center");
+                  cName.placeholder = "Enter The Duration in Years \( 2000 - 2001\)"
+            
+                  experience.appendChild(cName);
+                  experience.appendChild(document.createElement("br"));
+                  experience.appendChild(document.createElement("br"));
+            
+                  experience.appendChild(document.createTextNode("Title :"));
+                  var cName = document.createElement("input");
+                  cName.type = "text";
+                  cName.name = "exptitle";
+                  cName.style.position ="absolute"
+                  cName.style.left ="35%"
+                  cName.style.width ="35%"
+                  cName.classList.add("form-control");
+            
+                  experience.appendChild(cName);
+                  experience.appendChild(document.createElement("br"));
+                  experience.appendChild(document.createElement("br"));
+            
+                  experience.appendChild(document.createTextNode("Job Description :"));
+                  var cName = document.createElement("textarea");
+                  cName.type = "text";
+                  cName.name = "jDesc";
+                  cName.rows = "2";
+                  cName.cols = "32";
+                  cName.style.position ="absolute"
+                  cName.style.left ="35%"
+                  cName.style.width ="35%"
+                  cName.classList.add("form-control","text-center");
+            
+                  experience.appendChild(cName);
+                  experience.appendChild(document.createElement("br"));
+                  experience.appendChild(document.createElement("br"));
+                  experience.appendChild(document.createElement("br"));
+                }}
+                
+                function addEd() 
+                {
+                  counter2++
+                  if (counter2 == 1) {
+                  var experience = document.getElementById("education");
+                  experience.appendChild(document.createTextNode("Institute Name :"));
+                  var cName = document.createElement("input");
+                  cName.type = "text";
+                  cName.name = "insName";
+                  cName.style.position ="absolute"
+                  cName.style.left ="35%"
+                  cName.style.width ="35%"
+                  cName.classList.add("form-control");
+            
+                  experience.appendChild(cName);
+                  experience.appendChild(document.createElement("br"));
+                  experience.appendChild(document.createElement("br"));
+            
+                  experience.appendChild(document.createTextNode("Duration y-y :"));
+                  var cName = document.createElement("input");
+                  cName.type = "text";
+                  cName.name = "edduration";
+                  cName.style.position ="absolute"
+                  cName.style.left ="35%"
+                  cName.style.width ="35%"
+                  cName.classList.add("form-control");
+                  cName.placeholder = "Enter The Duration in Years \( 2000 - 2001\)"
+                  experience.appendChild(cName);
+                  experience.appendChild(document.createElement("br"));
+                  experience.appendChild(document.createElement("br"));
+            
+                  experience.appendChild(document.createTextNode("Course details :"));
+                  var cName = document.createElement("textarea");
+                  cName.type = "text";
+                  cName.name = "cDetails";
+                  cName.rows = "2";
+                  cName.cols = "32";
+                  cName.style.position ="absolute"
+                  cName.style.left ="35%"
+                  cName.style.width ="35%"
+                  cName.classList.add("form-control");
+            
+                  experience.appendChild(cName);
+                  experience.appendChild(document.createElement("br"));
+                  experience.appendChild(document.createElement("br"));
+                }}
+            
+                function test()
+                 {
+                  if (document.getElementById('temp1').checked == true) {
+              document.getElementById("temp").action = "temp1.html";
+            } else if (document.getElementById('temp2').checked == true) {
+              document.getElementById("temp").action = "temp2.html";
+            } else if (document.getElementById('temp3').checked == true) {
+              document.getElementById("temp").action = "temp3.html";
+            } 
+                }
+            
+              </script>
+</body>
+</html>
